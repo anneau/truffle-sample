@@ -1,0 +1,15 @@
+{
+  "extends": ["eslint:recommended", "plugin:mocha/recommended", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "env": {
+    "es6": true,
+    "mocha": true
+  },
+  "rules": {
+    "no-undef": [0, { "typeof": true }]
+  },
+  "plugins": ["@typescript-eslint"]
+}
