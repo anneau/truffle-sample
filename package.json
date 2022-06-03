@@ -4,17 +4,21 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "generate-types": "typechain --target=truffle-v5 'build/contracts/*.json'",
     "build": "truffle compile",
+    "postinstall": "yarn build && yarn generate-types",
     "migrate": "truffle migrate",
     "start": "ganache",
     "lint:sol": "solhint 'contracts/**/*.sol'",
     "prettier:sol": "prettier --write 'contracts/**/*.sol'"
   },
   "devDependencies": {
+    "@typechain/truffle-v5": "^8.0.0",
     "ganache": "^7.2.0",
     "prettier": "^2.6.2",
     "prettier-plugin-solidity": "^1.0.0-beta.19",
     "solhint": "^3.3.7",
-    "solhint-plugin-prettier": "^0.0.5"
+    "solhint-plugin-prettier": "^0.0.5",
+    "typechain": "^8.0.0"
   }
 }
